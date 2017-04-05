@@ -6,6 +6,7 @@
 * przyklady do ReactJS
 * przyklady do AngularJS
 * gra w zycie - jako example
+* wireworld - propozycja jako example
 
 # Spotkania
 
