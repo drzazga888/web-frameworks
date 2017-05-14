@@ -2,3 +2,5 @@
 .settings/
 bin/
 *.class
+WebContent/react-bundle.js
+node_modules/

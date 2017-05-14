@@ -1,0 +1,74 @@
+$textColor: #DFDDD2;
+$bgColor: #3E606F;
+$buttonColor: #7A8F8F;
+$accentColor: #66DFDA;
+
+* {
+  font-family: 'Courgette', cursive;
+  font-size: 18px;
+  color: $textColor;
+}
+
+body {
+  background: $bgColor;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 10px;
+  border-bottom: solid 1px $buttonColor;
+}
+
+a {
+  color: $accentColor;
+}
+
+header {
+  background: linear-gradient(to right, transparent, transparentize($accentColor, 0.7));
+  border-bottom: solid 5px $accentColor;
+  padding: 20px;
+  overflow: auto;
+}
+
+main {
+  margin: 20px;
+}
+
+button,
+.button {
+  border: none;
+  background: $buttonColor;
+  padding: 5px 15px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: solid 2px $buttonColor;
+  padding: 5px 15px;
+}
+
+dt {
+  border-bottom: solid 1px $buttonColor;
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+
+*:disabled {
+  opacity: 0.5;
+}
+
+h1 {
+  font-size: 2em;
+}
