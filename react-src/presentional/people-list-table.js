@@ -1,20 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FilteredPeopleList = ({ people, search }) => {
+const PeopleListTable = ({ people }) => {
+	
+	if (!people) {
+		return <p>Ładowanie...</p>;
+	}
+	
+	if (!people.length) {
+		return <p>Brak wyników spełniających kryteria :(</p>;
+	}
 
-  let lcasedSearch = search.toLowerCase();
-
-  let filtered = people.filter(item => (
-    item.id.toString().split(lcasedSearch).length > 1 ||
-    item.fname.toLowerCase().split(lcasedSearch).length > 1 ||
-    item.lname.toLowerCase().split(lcasedSearch).length > 1 ||
-    item.tel.toLowerCase().split(lcasedSearch).length > 1 ||
-    item.email.toLowerCase().split(lcasedSearch).length > 1 ||
-    item.city.toLowerCase().split(lcasedSearch).length > 1
-  ));
-
-  let rows = filtered.map(person => (
+  let rows = people.map(person => (
     <tr key={person.id}>
       <td>{person.id}</td>
       <td>{person.fname}</td>
@@ -49,4 +46,4 @@ const FilteredPeopleList = ({ people, search }) => {
 
 };
 
-export default FilteredPeopleList;
+export default PeopleListTable;
