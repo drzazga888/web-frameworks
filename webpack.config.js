@@ -2,10 +2,13 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './react-src/main.js',
+  entry: {
+	  react: './react-src/main.js',
+	  angular: './angular-src/main.js'
+  },
   output: {
-    path: __dirname + '/WebContent/',
-    filename: 'react-bundle.js'
+    path: path.join(__dirname, 'WebContent'),
+    filename: '[name]-bundle.js'
   },
   module: {
     loaders: [
