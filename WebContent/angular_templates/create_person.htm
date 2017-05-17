@@ -1,0 +1,36 @@
+<form ng-controller="CreatePersonController as person" name="personForm" ng-submit="person.addPerson()">
+	<h2>Stwórz osobę</h2>
+	<p>
+		<label>
+			Imię:
+			<input ng-model="person.person_data.lname" type="text"></input>
+		</label>
+	</p>
+	<p>
+		<label>
+			Nazwisko:
+			<input ng-model="person.person_data.fname" type="text"></input>
+		</label>
+	</p>
+	<p>
+		<label>
+			Telefon:
+			<input ng-model="person.person_data.tel" type="text"></input>
+		</label>
+	</p>
+	<p>
+		<label>
+			E-mail:
+			<input ng-model="person.person_data.email" type="text"></input>
+		</label>
+	</p>
+	<p>
+		<label>
+			Miasto:
+			<input ng-model="person.person_data.city" type="text"></input>
+		</label>
+	</p>
+	<p>
+		<input type="submit" value="Wyślij"/>
+	</p>
+</form>

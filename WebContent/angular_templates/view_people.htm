@@ -1,0 +1,36 @@
+<div ng-controller="ViewPeopleController as viewpeople">
+	<h2>Lista osób</h2>
+	<p>Filtrowanie: <input ng-change="viewpeople.research()" ng-model="viewpeople.searchquery" type="text" ></input><button ng-disabled="!viewpeople.searchquery" ng-click="viewpeople.cleansearchquery() && viewpeople.research()">Wyczyść</button>
+		Sortuj według: 
+		<select ng-change="viewpeople.research()" ng-model="viewpeople.orderby" >
+			<option value="fname">Imię</option>
+			<option value="lname">Nazwisko</option>
+			<option value="tel">Telefon</option>
+			<option value="email">E-mail</option>
+			<option value="city">Miasto</option>
+		</select>
+	</p>
+	<p ng-hide="viewpeople.data.length">Brak rekordów spełniających kryteria.</p>
+	<table ng-show="viewpeople.data.length">
+		<thead>
+			<th>ID</th>
+			<th>Imie</th>
+			<th>Nazwisko</th>
+			<th>Telefon</th>
+			<th>Email</th>
+			<th>Miasto</th>
+			<th>Akcje</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="person in viewpeople.data">
+				<td>{{person.id}}</td>
+				<td>{{person.fname}}</td>
+				<td>{{person.lname}}</td>
+				<td>{{person.tel}}</td>
+				<td>{{person.email}}</td>
+				<td>{{person.city}}</td>
+				<td><a ng-href={{"#!/person/"+person.id}}>Podgląd</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

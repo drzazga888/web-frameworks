@@ -1,0 +1,19 @@
+<div ng-controller="ViewPersonController as person">
+	<h2>Podgląd osoby</h2>
+	<dl>
+		<dt>ID</dt>
+		<dd>{{person.data.id}}</dd>
+		<dt>Imie</dt>
+		<dd>{{person.data.lname}}</dd>
+		<dt>Nazwisko</dt>
+		<dd>{{person.data.fname}}</dd>
+		<dt>Telefon</dt>
+		<dd>{{person.data.tel}}</dd>
+		<dt>Email</dt>
+		<dd>{{person.data.email}}</dd>
+		<dt>Miasto</dt>
+		<dd>{{person.data.city}}</dd>
+	</dl>
+	<a class="button" ng-href={{"#!/person/"+person.id+"/edit"}}>Edytuj</a>
+	<button ng-click="person.deletePerson()">Usuń</button>
+</div>

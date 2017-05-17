@@ -5,3 +5,4 @@ bin/
 WebContent/react-bundle.js
 WebContent/angular-bundle.js
 node_modules/
+.classpath
